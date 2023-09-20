@@ -1,0 +1,57 @@
+{
+  "name": "warm nights",
+  "version": "1.0.0",
+  "description": "A WebGL experience about the AI generated story, Warm Night",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack server --open --config ./bundler/webpack.server.js",
+    "build": "webpack --mode production --config ./bundler/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alkebsi/warm-nights.git"
+  },
+  "keywords": [
+    "WebGL",
+    "3D",
+    "Webpage",
+    "Creative",
+    "Interactive Experience",
+    "open source web project",
+    "warm nights",
+    "AI generated story",
+    "gsap",
+    "cannon.js",
+    "three.js",
+    "webpack"
+  ],
+  "author": "Mohammed Alkebsi (https://github.com/Alkebsi)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Alkebsi/warm-nights/issues"
+  },
+  "homepage": "https://github.com/Alkebsi/warm-nights#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.5.0",
+    "dat.gui": "^0.7.9",
+    "file-loader": "^6.2.0",
+    "gsap": "^3.12.1",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "portfinder-sync": "0.0.2",
+    "raw-loader": "^4.0.2",
+    "stats-js": "^1.0.1",
+    "style-loader": "^3.3.1",
+    "three": "^0.153.0",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
