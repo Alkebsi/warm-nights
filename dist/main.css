@@ -1,0 +1,441 @@
+/* 
+ * Fonts
+ */
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url(assets/fonts/37e1d48fe87dd79a.woff2) format('woff2 supports variations'),
+    url(assets/fonts/37e1d48fe87dd79a.woff2) format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+}
+
+/* 
+ * General Settings
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mona Sans";
+  font-weight: 300;
+  font-stretch: 100%;
+}
+
+html,
+body {
+  /* overflow: hidden; */
+  /* touch-action: none; */
+  background: #000;
+  color: #ffffff;
+}
+
+/* Styling the Scroll Bar */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5eac7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d2005;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+/* Styling the text selection */
+::-moz-selection {
+  color: #3d2005;
+  background: #f5eac7;
+}
+
+::selection {
+  color: #3d2005;
+  background: #f5eac7;
+}
+
+
+/* Dat.GUI */
+.dg.ac {
+  z-index: 80 !important;
+}
+
+/* WebGL and 3D Stuff */
+#webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: 0;
+  z-index: 5;
+  /* To have an extra space incase we need it */
+}
+
+/* Loading */
+#loading-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #f5eac7;
+  z-index: 79;
+}
+
+#loading-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+}
+
+#loading-logo * {
+  fill: #3d2005;
+  animation: logo-anim 5s infinite;
+}
+
+#loading-caption {
+  position: fixed;
+  bottom: 3px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  color: #3d2005;
+  opacity: 0.4;
+}
+
+/*
+ * Styling the Story Version
+ */
+
+/* Navigaiton Bar */
+#nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#dashes-con {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  transition: top 0.2s;
+  z-index: 10;
+}
+
+#dashes-con:hover {
+  cursor: pointer;
+  top: 10px;
+}
+
+.dashes {
+  width: 28px;
+  height: 1px;
+  margin: 6px 1px;
+  border-radius: 50px;
+  background: #f5eac7;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#right-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 8;
+}
+
+#rp-links-con {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.rp-links {
+  display: block;
+  margin: 10px 0;
+  padding: 0 50px;
+  color: #f5eac7;
+  border-bottom: 1px solid #f5eac7;
+  text-decoration: none;
+  text-align: right;
+  font-weight: 100;
+  font-size: 1.7em;
+  transform: translate(100%, 0);
+}
+
+#rp-link1 {
+  transition:
+    font-weight 0.2s,
+    font-stretch 0.2s,
+    transform 0.3s;
+}
+
+#rp-link2 {
+  transition:
+    font-weight 0.2s,
+    font-stretch 0.2s,
+    transform 0.5s;
+}
+
+#rp-link3 {
+  transition:
+    font-weight 0.2s,
+    font-stretch 0.2s,
+    transform 0.7s;
+}
+
+#rp-link4 {
+  transition:
+    font-weight 0.2s,
+    font-stretch 0.2s,
+    transform 0.9s;
+}
+
+#rp-link5 {
+  transition:
+    font-weight 0.2s,
+    font-stretch 0.2s,
+    transform 1.1s;
+}
+
+.rp-links:hover {
+  font-weight: 900;
+}
+
+#rp-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
+  display: none;
+  transition: opacity 0.2s;
+}
+
+/* Content */
+#content {
+  position: relative;
+  z-index: 7;
+}
+
+.content-title {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  padding: 50px;
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 25px;
+  text-align: center;
+  box-sizing: border-box;
+  text-shadow: 0 0 10px #3d200577;
+  pointer-events: none;
+}
+
+.content-ps,
+.parg9 {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  width: 100%;
+  padding: 20px 10vw;
+  box-sizing: border-box;
+  cursor: default;
+  text-shadow: 0 0 10px #3d200577;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.articles-clone {
+  color: #ffffff;
+  background: linear-gradient(transparent 0%, #00000077 40% 60%, transparent 100%);
+  /* background: #00000077; */
+  border: 1px 0px solid #f5eac7;
+  backdrop-filter: blur(3px);
+}
+
+.parg9 {
+  width: 100%;
+  font-weight: 900;
+  color: #f5eac7;
+  background: #000;
+  padding-top: 50vh;
+  padding-bottom: 50vh;
+}
+
+.parg9 a {
+  text-decoration: none;
+  color: #f5eac7;
+  font-stretch: 125%;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+}
+
+/* Scroll Manager */
+.scroll-pos {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* 
+ * Mouse Follow Element
+ */
+#mouse-follow-element {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 1px solid transparent;
+  transition: border 0.8s;
+  clip-path: inset(0 0 0 0);
+  border-radius: 0.0001px;
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* 
+ * Credits section "Footer"
+ */
+#credits {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  padding: 50px 100px;
+  box-sizing: border-box;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 9;
+}
+
+#credits-x {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #f5eac7;
+  border-radius: 50%;
+  color: #f5eac7;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 0;
+  padding: 6px 5px 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transform: scale(0.7);
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+  z-index: 2;
+}
+
+#credits-x:hover {
+  background: #f5eac7;
+  color: #000000;
+  transform: scale(1);
+}
+
+#credits-con:hover {
+  animation-play-state: paused !important;
+}
+
+#credits-caption {
+  text-align: center;
+  font-weight: 900;
+  font-stretch: 125%;
+  color: #f5eac7;
+  margin: 20px 0;
+}
+
+.credit-line {
+  margin: 1em 0;
+  text-indent: 1em;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+}
+
+.credit-line-tag {
+  font-weight: 600;
+}
+
+.credit-line,
+.credit-line-tag,
+.credit-line a,
+.credit-line-tag a {
+  text-decoration: none;
+  color: #f5eac7;
+}
+
+#credits-unordered-list {
+  margin: 0 1em;
+}
+
+.credits-list-item {
+  color: #f5eac7;
+}
+
+/* 
+ * Mobile View Edits
+ */
+@media screen and (max-width: 500px) {
+  #credits {
+    padding: 25px;
+  }
+}
+
+/* 
+ * CSS Based Animations
+ */
+/* Loading Logo Animation */
+@keyframes logo-anim {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes credits-anim {
+  0% {
+    transform: translate(0, 100vh);
+  }
+
+  100% {
+    transform: translate(0, -120%);
+  }
+}
+
+/*# sourceMappingURL=main.css.map*/
